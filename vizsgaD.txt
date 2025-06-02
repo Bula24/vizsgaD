@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Szöveg másolása</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea { width: 100%; height: 400px; margin-bottom: 10px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Utasítások idegenvezető részére</h1>
+  <textarea id="textToCopy">
+✅ Idegenvezetői teendők és utasítások
+
+1. Eligazításkor átveendő dokumentumok, anyagok:
+- Megrendelések/visszaigazolások másolatai...
+- Utalványok/voucherek (Hotel Azúr, Mala Garden, stb.)
+- E-ticketek (hajóút, paintball, bobpálya)
+- Utaslista, szobalista, térképek, prospektusok
+- 300.000 Ft belépőkre, 50.000 Ft készenléti pénz
+
+2. Egyeztetések:
+- Busz parkolása: BAHART hajóállomásnál díjmentes
+- Nincs különleges étrendi igény
+- Sofőr szállása saját fizetéssel
+
+3. Rendkívüli eset:
+- Referens: +36 20 465 3230
+- Jegyzőkönyv szükséges tanúkkal
+- Áfás számlát minden készpénzes fizetéshez kérni: vevő „Utazz velünk utazási iroda”
+
+4. Határidő:
+- Idegenvezetői beszámoló: 2025. június 9.
+  </textarea>
+  <br>
+  <button onclick="copyText()">📋 Szöveg másolása vágólapra</button>
+
+  <script>
+    function copyText() {
+      const textArea = document.getElementById("textToCopy");
+      textArea.select();
+      document.execCommand("copy");
+      alert("A szöveg másolva lett a vágólapra!");
+    }
+  </script>
+</body>
+</html>
